@@ -1,0 +1,110 @@
+/* app/assets/stylesheets/application.css */
+
+.navbar {
+  background-color: #f8f8f8;
+  padding: 10px;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.navbar-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.nav-link {
+  color: #555;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #888;
+}
+
+/* ハンバーガースタイル */
+.navbar-toggle {
+  display: none;
+}
+
+.navbar-toggle-label {
+  display: none;
+}
+
+/* メディアクエリ・フォー・モバイル */
+@media (max-width: 749) {
+  .navbar-nav {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: block;
+    position: relative;
+    z-index: 100;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  .navbar-toggle:before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin-bottom: 5px;
+  }
+
+  .navbar-toggle-label {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 200;
+    cursor: pointer;
+  }
+
+  #navbar-toggle:checked ~ .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+  }
+
+  #navbar-toggle:checked ~ .navbar-toggle-label:before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin-bottom: 5px;
+    transform: rotate(45deg);
+  }
+
+  #navbar-toggle:checked ~ .navbar-toggle-label:after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    transform: rotate(-45deg);
+  }
+}
