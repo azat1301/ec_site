@@ -1,24 +1,52 @@
 # README
+# ECサイトアプリ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+このアプリケーションは、Ruby on RailsとPostgreSQLを使用して構築されたオンラインショッピングサイトです。ユーザーは製品をカートに追加し、製品の購入ができます。また、認証にはDeviseを使用しています。
 
-Things you may want to cover:
+## インストールとセットアップ
 
-* Ruby version
+以下の手順に従って、アプリケーションを実行する準備を行ってください。
 
-* System dependencies
+### 前提条件
 
-* Configuration
+- Ruby 2.7.x
+- Ruby on Rails 6.x
+- PostgreSQL データベース
 
-* Database creation
+### 1. リポジトリのクローン
 
-* Database initialization
+まず、リポジトリをローカルマシンにクローンします。
 
-* How to run the test suite
+```
+$ git clone https://github.com/your-repository.git
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+2. 依存関係のインストール
+アプリケーションのディレクトリに移動し、必要な依存関係をインストールします。
 
-* Deployment instructions
+```
+$ cd your-app-directory
+$ bundle install
+```
 
-* ...
+3. データベースのセットアップ
+データベースをセットアップします。以下のコマンドを順番に実行してください。
+
+```
+$ rails db:create
+$ rails db:migrate
+```
+
+4. アプリケーションの起動
+アプリケーションを起動します。
+
+```
+$ rails server
+
+```
+
+お問い合わせ
+ご質問やご意見がありましたら、お気軽にお問い合わせください。
+
+作者: Azat Allayarov
+Eメール: azatallayarow@gmail.com
